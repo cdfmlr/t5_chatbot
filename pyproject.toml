@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "t5-chatbot"
+version = "0.1.0"
+description = ""
+authors = ["CDFMLR <cdfmlr@163.com>"]
+readme = "README.md"
+packages = [{include = "t5_chatbot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = {url = "https://download.pytorch.org/whl/cpu/torch-1.13.1-cp310-none-macosx_11_0_arm64.whl"}
+transformers = "4.11.0"
+jieba = "^0.42.1"
+rouge = "^1.0.1"
+bert4torch = "0.2.1"
+protobuf = "^4.22.1"
+grpcio = "^1.51.3"
+grpcio-reflection = "^1.51.3"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+secondary = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
